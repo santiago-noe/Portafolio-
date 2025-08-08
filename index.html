@@ -1,30 +1,325 @@
-
 <!DOCTYPE html>
-<html lang="es-mx">
-<head>
-    <meta charset="UTF-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header></header>
-    <main>
-        <h1>
-            Eleve tu negocio digital a otro nivel 
-            <strong>con un Front-end de calidad!
-            </strong></h1>
-            <p>¡Hola! Soy Ana García, desarrolladora Front-end con
-                especialización en React, HTML y CSS. Ayudo a pequeños
-                 negocios y diseñadores a llevar a cabo buenas ideas.
-                  ¿Hablamos?
+<html lang="es">
 
-            </p>
-            <a href="https://instagram.com/">Instagram</a>
-            <a href="https://github.com/">GitHub</a>
-            <img src="iamgem.png" alt="Foto de Ana García desarrolando un proyecto">
-    </main>
-    <footer></footer>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Noe - Ingeniería de Sistemas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/lucide@latest/dist/lucide.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="portfolio-container">
+        <header class="portfolio-header">
+            <div class="container">
+                <a href="/" class="logo">
+                    <span class="logo-cyan">Noe</span>
+                    <span>Portfolio</span>
+                </a>
+                <nav class="desktop-nav">
+                    <a href="#about">Sobre Mí</a>
+                    <a href="#skills">Habilidades</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#education">Educación</a>
+                    <a href="#contact">Contacto</a>
+                </nav>
+                <button class="download-cv">Descargar CV</button>
+                <button class="mobile-menu-button">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <h1>Hola, soy <span class="text-cyan">Noe</span></h1>
+                            <p class="text-muted">Estudiante de Ingeniería de Sistemas en la Universidad Nacional
+                                San Cristóbal de Huamanga, perteneciente al tercio superior.</p>
+                        </div>
+                        <div class="hero-image">
+                            <div class="image-wrapper">
+                                <img src="img-1-1.png" alt="Noe">
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <button class="btn-primary">Contactar <i data-lucide="arrow-right"></i></button>
+                            <button class="btn-outline">Ver Proyectos</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="about" class="about-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Sobre Mí</span>
+                        <h2>Conóceme <span class="text-cyan">mejor</span></h2>
+                        <p class="text-muted">Soy un estudiante apasionado de Ingeniería de Sistemas, con un fuerte
+                            interés en el desarrollo web, bases de datos y sistemas de información. Disfruto resolviendo
+                            problemas complejos y creando soluciones tecnológicas que generen un impacto positivo.
+                            Actualmente pertenezco al tercio superior de mi carrera y cuento con un nivel intermedio de
+                            inglés (B1), lo que me permite acceder a documentación técnica y recursos globales.</p>
+                    </div>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <ul class="about-list">
+                                <li>
+                                    <h3 class="text-cyan">Desarrollo Web</h3>
+                                    <p class="text-muted">Experiencia en desarrollo frontend y backend, creando
+                                        aplicaciones web modernas y responsivas.</p>
+                                </li>
+                                <li>
+                                    <h3 class="text-cyan">Bases de Datos</h3>
+                                    <p class="text-muted">Conocimiento en diseño, implementación y optimización de bases
+                                        de datos relacionales.</p>
+                                </li>
+                                <li>
+                                    <h3 class="text-cyan">Análisis de Sistemas</h3>
+                                    <p class="text-muted">Capacidad para analizar requisitos y diseñar soluciones
+                                        eficientes para problemas complejos.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="about-image">
+                            <div class="image-wrapper">
+                                <img src="img-5.png" alt="Sobre Noe">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="skills-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Habilidades</span>
+                        <h2>Mis <span class="text-cyan">Competencias</span> Técnicas</h2>
+                        <p class="text-muted">He desarrollado diversas habilidades técnicas a lo largo de mi formación
+                            académica y proyectos personales.</p>
+                    </div>
+                    <div class="skills-cards">
+                        <div class="skill-card">
+                            <div class="card-header">
+                                <i data-lucide="code" class="text-cyan"></i>
+                                <h3>Desarrollo Frontend</h3>
+                            </div>
+                            <ul class="skill-list">
+                                <li><span class="dot-cyan"></span> HTML5 & CSS3</li>
+                                <li><span class="dot-cyan"></span> JavaScript</li>
+                                <li><span class="dot-cyan"></span> React</li>
+                            </ul>
+                        </div>
+                        <div class="skill-card">
+                            <div class="card-header">
+                                <i data-lucide="server" class="text-green"></i>
+                                <h3>Desarrollo Backend</h3>
+                            </div>
+                            <ul class="skill-list">
+                                <li><span class="dot-green"></span> Node.js</li>
+                                <li><span class="dot-green"></span> Java</li>
+                                <li><span class="dot-green"></span> Python</li>
+                            </ul>
+                        </div>
+                        <div class="skill-card">
+                            <div class="card-header">
+                                <i data-lucide="database" class="text-blue"></i>
+                                <h3>Bases de Datos / Idiomas</h3>
+                            </div>
+                            <ul class="skill-list">
+                                <li><span class="dot-blue"></span> MySQL</li>
+                                <li><span class="dot-blue"></span> SQL Server</li>
+                                <li><span class="dot-blue"></span> Inglés B1</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="projects-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Proyectos</span>
+                        <h2>Mis <span class="text-cyan">Trabajos</span> Recientes</h2>
+                        <p class="text-muted">Estos son algunos de los proyectos en los que he trabajado durante mi
+                            formación académica.</p>
+                    </div>
+                    <div class="project-cards">
+                        <div class="project-card">
+                            <div class="card-image">
+                                <img src="img-2.jpeg" alt="Proyecto 1">
+                            </div>
+                            <div class="card-content">
+                                <h3>Sistema de Gestión Académica</h3>
+                                <p class="text-muted">Aplicación web para la gestión de estudiantes, cursos y
+                                    calificaciones.</p>
+                                <p class="card-description">Desarrollado con React, Node.js y MySQL. Implementa
+                                    autenticación, roles y reportes.</p>
+                            </div>
+                            <button class="btn-card-outline">Ver Detalles</button>
+                        </div>
+                        <div class="project-card">
+                            <div class="card-image">
+                                <img src="img-3.webp" alt="Proyecto 2">
+                            </div>
+                            <div class="card-content">
+                                <h3>E-commerce de Productos Locales</h3>
+                                <p class="text-muted">Plataforma para la venta de productos artesanales de la región.
+                                </p>
+                                <p class="card-description">Construido con Next.js, Tailwind CSS y MongoDB. Incluye
+                                    carrito de compras y pasarela de pagos.</p>
+                            </div>
+                            <button class="btn-card-outline">Ver Detalles</button>
+                        </div>
+                        <div class="project-card">
+                            <div class="card-image">
+                                <img src="img-4.webp" alt="Proyecto 3">
+                            </div>
+                            <div class="card-content">
+                                <h3>App Móvil de Turismo</h3>
+                                <p class="text-muted">Aplicación para explorar lugares turísticos de Ayacucho.</p>
+                                <p class="card-description">Desarrollada con React Native y Firebase. Incluye mapas,
+                                    reseñas y recomendaciones.</p>
+                            </div>
+                            <button class="btn-card-outline">Ver Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="education-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Educación</span>
+                        <h2>Mi <span class="text-cyan">Formación</span> Académica</h2>
+                        <p class="text-muted">Mi trayectoria educativa y certificaciones obtenidas.</p>
+                    </div>
+                    <div class="education-items">
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h3>Ingeniería de Sistemas</h3>
+                                <span class="badge-current">Actual</span>
+                            </div>
+                            <p class="text-muted">Universidad Nacional San Cristóbal de Huamanga</p>
+                            <p class="education-date">2022 - Presente</p>
+                            <p>Formación en desarrollo de software, bases de datos, redes, inteligencia artificial y
+                                gestión de proyectos.</p>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h3>Curso de especialización en Desarrollo Web</h3>
+                                <span class="badge-completed">Completado</span>
+                            </div>
+                            <p class="text-muted">Plataforma de Cursos Online</p>
+                            <p class="education-date">2023</p>
+                            <p>Especialización en tecnologías web modernas, incluyendo HTML5, CSS3, JavaScript, React y
+                                Node.js.</p>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h3>Curso de Bases de Datos Avanzadas</h3>
+                                <span class="badge-completed">Completado</span>
+                            </div>
+                            <p class="text-muted">Universidad Nacional de Ingenieria</p>
+                            <p class="education-date">2024</p>
+                            <p>Formación en diseño, optimización y administración de bases de datos relacionales y
+                                NoSQL.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Contacto</span>
+                        <h2>¡<span class="text-cyan">Hablemos</span>!</h2>
+                        <p class="text-muted">¿Tienes algún proyecto en mente? No dudes en contactarme.</p>
+                    </div>
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <i data-lucide="user" class="text-cyan"></i>
+                                <div>
+                                    <h4>Nombre</h4>
+                                    <p class="text-muted">Noe Yupanqui Santiago</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="mail" class="text-cyan"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p class="text-muted">noe.yupanqui.27@unsch.edu.pe</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="linkedin" class="text-cyan"></i>
+                                <div>
+                                    <h4>LinkedIn</h4>
+                                    <p class="text-muted">linkedin.com/in/santiago-noe/</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="github" class="text-cyan"></i>
+                                <div>
+                                    <h4>GitHub</h4>
+                                    <p class="text-muted">github.com/santiago-noe</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <h3>Envíame un mensaje</h3>
+                            <p class="text-muted">Completa el formulario y me pondré en contacto contigo lo antes
+                                posible.</p>
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="first-name">Nombre</label>
+                                        <input type="text" id="first-name" placeholder="Tu nombre">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last-name">Apellido</label>
+                                        <input type="text" id="last-name" placeholder="Tu apellido">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="tu@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Mensaje</label>
+                                    <textarea id="message" placeholder="Escribe tu mensaje aquí..."></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="portfolio-footer">
+            <div class="container">
+                <p>© 2023 Noe. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="https://github.com/santiago-noe"><i data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/santiago-noe/"><i data-lucide="linkedin"></i></a>
+                    <a href="mailto:noe.yupanqui.27@unsch.edu.pe?subject=Contacto desde Portafolio">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>
