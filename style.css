@@ -159,6 +159,53 @@ body {
     cursor: pointer;
 }
 
+/* Menú móvil (oculto por defecto) */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px; /* Altura del header */
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 14, 20, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(17, 24, 35, 0.5);
+    padding: 16px 0;
+    z-index: 49;
+}
+
+.mobile-nav a {
+    padding: 12px 24px;
+    color: var(--text);
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.mobile-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Mostrar menú móvil solo en pantallas pequeñas */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .mobile-nav.active {
+        display: flex;
+    }
+}
+
+/* Ocultar botón móvil en desktop */
+@media (min-width: 769px) {
+    .mobile-menu-button {
+        display: none;
+    }
+}
 /* Hero Section */
 .hero-section {
     width: 100%;
