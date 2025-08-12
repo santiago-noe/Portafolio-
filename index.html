@@ -24,7 +24,7 @@
                     <a href="#education">Educación</a>
                     <a href="#contact">Contacto</a>
                 </nav>
-                <button class="download-cv">Descargar CV</button>
+                <button class="download-cv" onclick="descargarCV()">Descargar CV</button>
                 <button class="mobile-menu-button">
                     <i data-lucide="menu"></i>
                 </button>
@@ -46,8 +46,10 @@
                             </div>
                         </div>
                         <div class="hero-buttons">
-                            <button class="btn-primary">Contactar <i data-lucide="arrow-right"></i></button>
-                            <button class="btn-outline">Ver Proyectos</button>
+                            <button class="btn-primary" onclick="window.location.href='https://wa.me/945984518'">
+                                Contactar <i data-lucide="arrow-right"></i>
+                            </button>
+                            <button class="btn-outline" onclick="window.location.href='#projects'">Ver Proyectos</button>
                         </div>
                     </div>
 
@@ -317,6 +319,7 @@
     </div>
 
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
     <script>
         lucide.createIcons();
     </script>
