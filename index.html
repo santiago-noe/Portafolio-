@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Noe - Ingeniería de Sistemas</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/lucide@latest/dist/lucide.min.css" rel="stylesheet">
+    <meta name="description" content="Portafolio de Noe Yupanqui Santiago: desarrollo web, bases de datos y proyectos de Ingeniería de Sistemas.">
+    <script>try { document.documentElement.dataset.theme = localStorage.getItem("portfolio-theme") || "dark"; } catch {} </script>
 </head>
 
 <body>
     <div class="portfolio-container">
         <header class="portfolio-header">
             <div class="container">
-                <a href="/" class="logo">
+                <a href="#inicio" class="logo">
                     <span class="logo-cyan">Noe</span>
                     <span>Portfolio</span>
                 </a>
@@ -25,11 +26,12 @@
                     <a href="#contact">Contacto</a>
                 </nav>
                 <button class="download-cv" onclick="descargarCV()">Descargar CV</button>
-                <button class="mobile-menu-button">
+                <button class="theme-toggle" type="button" aria-label="Cambiar tema" aria-pressed="false"><span aria-hidden="true">&#9680;</span><span class="theme-label">Tema claro</span></button>
+                <button class="mobile-menu-button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-navigation">
                     <i data-lucide="menu"></i>
                 </button>
             </div>
-            <nav class="mobile-nav">
+            <nav class="mobile-nav" id="mobile-navigation" aria-label="Navegación móvil">
                 <a href="#about">Sobre Mí</a>
                 <a href="#skills">Habilidades</a>
                 <a href="#projects">Proyectos</a>
@@ -40,21 +42,22 @@
         </header>
 
         <main>
-            <section class="hero-section">
+            <section class="hero-section" id="inicio">
                 <div class="container">
                     <div class="hero-content">
                         <div class="hero-text">
+                            <p class="eyebrow">DESARROLLO WEB · INGENIERÍA DE SISTEMAS</p>
                             <h1>Hola, soy <span class="text-cyan">Noe</span></h1>
                             <p class="text-muted">Estudiante de Ingeniería de Sistemas en la Universidad Nacional
                                 San Cristóbal de Huamanga, perteneciente al tercio superior.</p>
                         </div>
                         <div class="hero-image">
                             <div class="image-wrapper">
-                                <img src="img/img-1-1.png" alt="Noe">
+                                <img fetchpriority="high" src="img/img-1-1.png" alt="Noe">
                             </div>
                         </div>
                         <div class="hero-buttons">
-                            <button class="btn-primary" onclick="window.location.href='https://wa.me/945984518'">
+                            <button class="btn-primary" onclick="window.location.href='https://wa.me/51945984518'">
                                 Contactar <i data-lucide="arrow-right"></i>
                             </button>
                             <button class="btn-outline" onclick="window.location.href='#projects'">Ver
@@ -98,7 +101,7 @@
                         </div>
                         <div class="about-image">
                             <div class="image-wrapper">
-                                <img src="img/img-5.png" alt="Sobre Noe">
+                                <img loading="lazy" src="img/img-5.png" alt="Sobre Noe">
                             </div>
                         </div>
                     </div>
@@ -162,7 +165,7 @@
                     <div class="project-cards">
                         <div class="project-card">
                             <div class="card-image">
-                                <img src="img/img-2.jpeg" alt="Proyecto 1">
+                                <img loading="lazy" src="img/img-2.jpeg" alt="Proyecto 1">
                             </div>
                             <div class="card-content">
                                 <h3>Sistema de Gestión Académica</h3>
@@ -175,7 +178,7 @@
                         </div>
                         <div class="project-card">
                             <div class="card-image">
-                                <img src="img/img-3.webp" alt="Proyecto 2">
+                                <img loading="lazy" src="img/img-3.webp" alt="Proyecto 2">
                             </div>
                             <div class="card-content">
                                 <h3>E-commerce de Productos Locales</h3>
@@ -188,7 +191,7 @@
                         </div>
                         <div class="project-card">
                             <div class="card-image">
-                                <img src="img/img-4.webp" alt="Proyecto 3">
+                                <img loading="lazy" src="img/img-4.webp" alt="Proyecto 3">
                             </div>
                             <div class="card-content">
                                 <h3>App Móvil de Turismo</h3>
@@ -284,28 +287,28 @@
                         </div>
                         <div class="contact-form">
                             <h3>Envíame un mensaje</h3>
-                            <p class="text-muted">Completa el formulario y me pondré en contacto contigo lo antes
-                                posible.</p>
-                            <form>
+                            <p class="text-muted">Completa el formulario para preparar un mensaje en tu aplicación de correo.</p>
+                            <form id="contact-form">
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label for="first-name">Nombre</label>
-                                        <input type="text" id="first-name" placeholder="Tu nombre">
+                                        <input type="text" id="first-name" name="first-name" autocomplete="given-name" required placeholder="Tu nombre">
                                     </div>
                                     <div class="form-group">
                                         <label for="last-name">Apellido</label>
-                                        <input type="text" id="last-name" placeholder="Tu apellido">
+                                        <input type="text" id="last-name" name="last-name" autocomplete="family-name" placeholder="Tu apellido">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" id="email" placeholder="tu@email.com">
+                                    <input type="email" id="email" name="email" autocomplete="email" required placeholder="tu@email.com">
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Mensaje</label>
-                                    <textarea id="message" placeholder="Escribe tu mensaje aquí..."></textarea>
+                                    <textarea id="message" name="message" required placeholder="Escribe tu mensaje aquí..."></textarea>
                                 </div>
-                                <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                                <button type="submit" class="btn-primary">Preparar correo <i data-lucide="arrow-up-right"></i></button>
+                                <p id="form-status" role="status"></p>
                             </form>
                         </div>
                     </div>
@@ -315,11 +318,11 @@
 
         <footer class="portfolio-footer">
             <div class="container">
-                <p>© 2023 Noe. Todos los derechos reservados.</p>
+                <p>© <span id="current-year">2026</span> Noe. Todos los derechos reservados.</p>
                 <div class="social-links">
-                    <a href="https://github.com/santiago-noe"><i data-lucide="github"></i></a>
-                    <a href="https://www.linkedin.com/in/santiago-noe/"><i data-lucide="linkedin"></i></a>
-                    <a href="mailto:noe.yupanqui.27@unsch.edu.pe?subject=Contacto desde Portafolio">
+                    <a href="https://github.com/santiago-noe" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/santiago-noe/" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a aria-label="Enviar correo" href="mailto:noe.yupanqui.27@unsch.edu.pe?subject=Contacto desde Portafolio">
                         <i data-lucide="mail"></i>
                     </a>
                 </div>
@@ -329,9 +332,7 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+
 </body>
 
 </html>
