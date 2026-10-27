@@ -77,6 +77,8 @@ svg { width:20px; height:20px; flex-shrink:0; }
 .info-item { display:flex; gap:18px; align-items:center; min-width:0; }
 .info-item p { overflow-wrap:anywhere; font-size:14px; }
 .info-item h4 { font-size:13px; }
+.contact-link { display:inline-block; padding:8px 0; text-decoration:underline; text-underline-offset:4px; text-decoration-color:var(--border); }
+.contact-link:hover,.contact-link:focus-visible { color:var(--text); text-decoration-color:currentColor; }
 .contact-form { padding:30px; }
 .contact-form h3 { font-size:22px; margin-bottom:8px; }
 .contact-form>p { font-size:14px; margin-bottom:24px; }
